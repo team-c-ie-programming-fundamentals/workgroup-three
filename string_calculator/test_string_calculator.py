@@ -1,3 +1,4 @@
+
 from string_calculator import string_calculator
 
 def test_string_calculator_empty_string():
