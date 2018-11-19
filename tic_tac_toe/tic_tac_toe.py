@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-
-#%%
-
 #%% 1.A
 
 #In this list we simply compare if the condition we need
@@ -74,7 +70,7 @@ testlist_unl2 = [['x','o','x','o','x'],
 
                 
 board = [['x', 'o', 'x'], 
-         ['o', 'o', 'x'], 
+         ['o', 'x', 'o'], 
          ['x', 'x', 'x']] 
 
 
@@ -135,9 +131,9 @@ def solved_vertical_unlimited(lst):
     
 #%%
 
-testlist_diagonal = [['x','o','x'],
+testlist_diagonal = [['x','o','o'],
                      ['o','x','x'], 
-                     ['x','o','o']]
+                     ['x','o','x']]
 
 
 #Same as simple 3x3 of other functions
@@ -170,13 +166,64 @@ def solved_diagonal_left(lst):
             if counter_i == len(lst):
                 return True
         else:
-            return False 
+            return False       
+  
+#and the second one, viceversa.   
+def solved_diagonal_right (lst):
+    i = 0
+    
+    counter_j = 0
+    board_len = len(lst) -1 
+    while i < len(lst):
+          if lst[i][board_len] == 'x':
+              counter_j += 1
+              i += 1
+              board_len = board_len -1
+              if counter_j == len(lst):
+                  return True     
+          else: 
+              return False
+ 
+board2 = [['x', 'o', 'x', 'o', 'x'], 
+         ['o', 'x', 'x', 'x', 'x'], 
+         ['x', 'x', 'x', 'o', 'o'],
+         ['x', 'x', 'x', 'o', 'o'],
+         ['x', 'x', 'x', 'o', 'x']]
+             
+
+#We finally call the "meta" function as a combination of conditions.  
+def solved_diagonal_unlimited(lst):
+    if solved_diagonal_left(lst) == solved_diagonal_right(lst) == False:
+        return False 
+    elif solved_diagonal_left(lst) == True:
+        return True
+    elif solved_diagonal_right(lst) == True:
+        return True
+
 
 #%%
 
+testlist_tictac = [['x','x','x'], 
+                   ['o','x','x'], 
+                   ['x','x','o']]
+
+#All functions together to tell if x won the game in a 3X3        
+def solved_tictactoe(lst):
+    if solved_horizontal(lst) == True:
+        return str(True) + " by horizontal win"
+    elif solved_vertical(lst) == True:
+        return str(True) + " by vertical win"
+    elif solved_diagonal(lst) == True:
+        return str(True) + " by diagonal win"
+    else:
+        return False
+    
+    
+    
+#All functions together to tell if x won the game in an unlimited board 
 def solved_tictactoe_unlimited(lst):
-    if lst == []:
-        return ''
+    if lst == []: 
+        return "empty"
     elif solved_horizontal_unlimited(lst) == True:
         return str(True) + " by horizontal win"
     elif solved_vertical_unlimited(lst) == True:
@@ -185,3 +232,7 @@ def solved_tictactoe_unlimited(lst):
         return str(True) + " by diagonal win"
     else:
         return False
+    
+        
+    
+

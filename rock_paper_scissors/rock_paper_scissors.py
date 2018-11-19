@@ -49,7 +49,7 @@ def rpsls(player1, player2):
         elif player2 == "spock":
             return "Player 2 won!"
         elif player2 == "lizzard":
-            return "Player 1 won"
+            return "Player 1 won!"
    
     elif player1 == "paper":
         if player2 == "paper":
@@ -61,19 +61,19 @@ def rpsls(player1, player2):
         elif player2 == "spock":
             return "Player 1 won!"
         elif player2 == "lizzard":
-            return "Player 2 won"
+            return "Player 2 won!"
     
     elif player1 == "spock":
         if player2 == "paper":
-            return "Player 2 won"
+            return "Player 2 won!"
         elif player2 == "scissors":
-            return "Player 1 won"
+            return "Player 1 won!"
         elif player2 == "rock":
-            return "Player 1 won"
+            return "Player 1 won!"
         elif player2 == "spock":
             return "Play again!"
         elif player2 == "lizzard":
-            return "Player 2 won"
+            return "Player 2 won!"
         
     elif player1 == "lizzard":
         if player2 == "paper":

@@ -7,10 +7,12 @@
   "fizzbuzzwhizz/test_fizzbuzzwhizz.py::test_fizzbuzzwhiz_returns_whiz",
   "fizzbuzzwhizz/test_fizzbuzzwhizz.py::test_fizzbuzzwhiz_returns_notvalid",
   "rock_paper_scissors/test_rock_paper_scissors.py::test_rockpaperscissors",
+  "rock_paper_scissors/test_rock_paper_scissors.py::test_rpsls",
   "string_calculator/test_string_calculator.py::test_string_calculator_empty_string",
   "string_calculator/test_string_calculator.py::test_string_calculator_zero_with_spaces",
   "string_calculator/test_string_calculator.py::test_string_calculator_zero_with_numbers",
   "string_calculator/test_string_calculator.py::test_string_calculator_not_subsequent_numbers",
   "string_calculator/test_string_calculator.py::test_string_calculator_random_spaces_with_numbers",
-  "string_calculator/test_string_calculator.py::test_string_calculator_random_spaces_with_big_numbers"
+  "string_calculator/test_string_calculator.py::test_string_calculator_random_spaces_with_big_numbers",
+  "tic_tac_toe/test_tic_tac_toe.py::test_solved_all"
 ]
